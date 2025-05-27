@@ -36,6 +36,23 @@ function button2() {
   setTimeout(() => {
     clearInterval(intervalo);
   }, duracao);
+
+  // Texto digitado
+  const texto = "Você é alguém muito especial 💖";
+  let i = 0;
+
+  const mensagem = document.getElementById("mensagemDigitada");
+  mensagem.textContent = ""; // limpa antes de digitar
+
+  function digitarTexto() {
+    if (i < texto.length) {
+      mensagem.textContent += texto.charAt(i);
+      i++;
+      setTimeout(digitarTexto, 100);
+    }
+  }
+
+  digitarTexto();
 }
 
 
@@ -59,3 +76,4 @@ function criarCoracao() {
 function button3() {
   window.open("coracao.html", "_blank");
 }
+
