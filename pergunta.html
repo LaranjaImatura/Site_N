@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pergunta Especial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 {
+      color: #c71585;
+      margin-bottom: 40px;
+    }
+
+    .botoes-resposta button {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background-color: #ff69b4;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .botoes-resposta button:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+  <h1>Você quer ser a razão do meu sorriso todos os dias ? 🥹💖</h1>
+
+  <div class="botoes-resposta">
+    <button onclick="respostaSim()">Sim</button>
+    <button onclick="respostaNao()">Não</button>
+  </div>
+
+  <script>
+  function respostaSim() {
+    const mensagem = "Eu aceito o seu pedido !! 💖";
+    const numero = "5511990065287"; // Ex: 5599999999999 (com DDI e DDD, sem + ou traços)
+
+    const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+    window.open(link, "_blank");
+  }
+
+  function respostaNao() {
+    alert("Ahhh, não vale mentir! 😢");
+  }
+</script>
+
+
+
+</body>
+</html>
